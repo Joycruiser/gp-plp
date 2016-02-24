@@ -169,3 +169,7 @@ a {
 		}
 		
 		}
+		
+		.gm-style-mtc, .gm-svpc {
+			display: none;
+		}
