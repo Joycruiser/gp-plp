@@ -1,0 +1,175 @@
+a { 
+		text-decoration: none;
+		outline: none;
+		}
+		
+		html, body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+		}
+		
+		#map {
+			height: 100%;
+			top:0px;
+		}
+		
+		#wrapper { 
+		position: relative;
+		}
+		
+		.login-register-forgotten {
+		position: absolute; 
+		z-index: 99; 		
+		width:100%;
+		height:100%;
+		background:rgba(0, 0, 0, 0.9);
+		}
+		
+		.login-register-forgotten-container {
+		width:60%;
+		height:60%;
+		top:20%;
+		bottom:20%;
+		left:20%;
+		right:20%;
+		background:white;
+		position: absolute; 
+		}
+		
+		#login {
+		display:none;
+		}
+		
+		#register {
+		display:none;
+		}
+		
+		#forgottenpswd {
+		display:none;
+		}
+		
+		.event-tab {
+		position: absolute; 
+		z-index: 99; 		
+		width:100%;
+		height:100%;
+		background:rgba(0, 0, 0, 0.9);
+		}
+		
+		.event-tab-container {
+		width:80%;
+		height:80%;
+		top:10%;
+		bottom:10%;
+		left:10%;
+		right:10%;
+		background:white;
+		position: absolute; 
+		}
+		
+		#event-managing-center {
+		display:none;
+		}
+		
+		#footer-section {
+		position: absolute; 
+		z-index: 99; 		
+		width:100%;
+		height:50px;
+		background:transparent;
+		bottom:0px;
+		}
+		
+		#footer-content {
+		width:80%;
+		height:100%;
+		margin-left:10%;
+		margin-right:10%;
+		text-align:center;
+		}
+		
+		#footer-menu {
+		line-height:50px;
+		max-width:100%;
+		height:100%;
+		}
+		
+		.footer-menu-items {
+		color:orange;
+		max-height:50%;
+		vertical-align: middle;
+		}
+		
+		#footer-menu-item-2 {
+		margin-right:30px;
+		}
+		
+		#header-section { 
+		position: absolute; 
+		z-index: 99; 		
+		width:100%;
+		height:50px;
+		background:transparent;
+		}
+		#header-content {
+		width:80%;
+		height:100%;
+		margin-left:10%;
+		margin-right:10%;
+		}
+		#logo {
+		line-height:50px;
+		height:100%;
+		max-width:50%;
+		float:left;
+		}
+		#logo-img {
+		   max-width:100%;
+		   max-height:80%;
+		   vertical-align:middle;
+		}
+		
+		#mobile-menu {
+		display:none;
+		height:100%;
+		float:right;
+		width:20%;
+		}
+		#mobile-menu-img {
+		max-height:80%;
+		max-width:100%;
+		float:right;
+		}
+		
+		#header-menu {
+		line-height:50px;
+		max-width:70%;
+		height:100%;
+		float:right;
+		}
+		
+		.header-menu-items {
+		margin-right:30px;
+		max-height:50%;
+		vertical-align: middle;
+		}
+		
+		@media screen and (max-width:980px)
+		{
+		#header-menu {
+		display:none;
+		}
+		#mobile-menu {
+		display:block;
+		}
+		#logo {
+		max-width:80%;
+		}
+		
+		}
+		
+		.gm-style-mtc, .gm-svpc {
+			display: none;
+		}
