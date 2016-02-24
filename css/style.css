@@ -165,7 +165,11 @@ a {
 		display:block;
 		}
 		#logo {
-		max-width:80%;
+		max-width:100%;
 		}
 		
+		}
+		
+		.gm-style-mtc, .gm-svpc {
+			display: none;
 		}
