@@ -78,7 +78,7 @@ a {
 		z-index: 99; 		
 		width:100%;
 		height:50px;
-		background:transparent;
+		background:black;
 		bottom:0px;
 		}
 		
@@ -97,7 +97,7 @@ a {
 		}
 		
 		.footer-menu-items {
-		color:orange;
+		color:#f15e22;
 		max-height:50%;
 		vertical-align: middle;
 		}
@@ -176,3 +176,4 @@ a {
 		.gm-style-mtc, .gm-svpc {
 			display: none;
 		}
+		div.gmnoprint { margin-top: -50px; }
