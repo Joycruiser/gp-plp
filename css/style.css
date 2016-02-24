@@ -78,7 +78,7 @@ a {
 		z-index: 99; 		
 		width:100%;
 		height:50px;
-		background:transparent;
+		background:black;
 		bottom:0px;
 		}
 		
@@ -168,7 +168,7 @@ a {
 		display:block;
 		}
 		#logo {
-		max-width:100%;
+		max-width:80%;
 		}
 		
 		}
@@ -176,3 +176,4 @@ a {
 		.gm-style-mtc, .gm-svpc {
 			display: none;
 		}
+		div.gmnoprint { margin-top: -50px; }
