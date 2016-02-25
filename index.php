@@ -21,7 +21,7 @@
 				</div>
 				<div id="header-menu">
 					<a href="#">
-						<img class="header-menu-items" id="menu-item-1" src="img/eicon.png" alt="profile"></img>
+						<img class="header-menu-items" id="my-location" src="img/pin.png" alt="pin"></img>
 					</a>
 					<?php 
 					if (!isset($_SESSION["user"]))
@@ -42,7 +42,7 @@
 					}
 					?>
 					<a href="#">
-						<img class="header-menu-items" id="menu-item-3" src="img/pin.png" alt="pin"></img>
+						<img class="header-menu-items" id="menu-item-1" src="img/eicon.png" alt="profile"></img>
 					</a>
 				</div>
 				<div id="mobile-menu">
@@ -161,7 +161,7 @@
 					
 
 		
-				function init() {
+			function init() {
             var mapOptions = {
                 zoom: 15,
                 center: new google.maps.LatLng(cor1, cor2), // New York
@@ -176,12 +176,62 @@
             map: map,
             title: 'Event Finder'
             });
-			var cat1 = new google.maps.Marker({
-			position: new google.maps.LatLng(55.386179699999995, 10.41124),
-			icon: "http://localhost/eventfinder/img/coorporatepin.png",
-            map: map,
-            title: 'Event'
-            });
+			<?php 
+					if (isset($_SESSION["user"]))
+					{
+						?>
+							var cat1 = new google.maps.Marker({
+							position: new google.maps.LatLng(55.386179699999995, 10.41124),
+							icon: "http://localhost/eventfinder/img/coorporatepin.png",
+							map: map,
+							title: 'Event'
+							});
+							
+							var cat2 = new google.maps.Marker({
+							position: new google.maps.LatLng(55.376111699999995, 10.41324),
+							icon: "http://localhost/eventfinder/img/coorporatepin.png",
+							map: map,
+							title: 'Event'
+							});
+							
+							var cat3 = new google.maps.Marker({
+							position: new google.maps.LatLng(55.383179699999995, 10.39124),
+							icon: "http://localhost/eventfinder/img/officialpin.png",
+							map: map,
+							title: 'Event'
+							});
+							
+							var cat4 = new google.maps.Marker({
+							position: new google.maps.LatLng(55.383179699999995, 10.42124),
+							icon: "http://localhost/eventfinder/img/officialpin.png",
+							map: map,
+							title: 'Event'
+							});
+							
+							var cat5 = new google.maps.Marker({
+							position: new google.maps.LatLng(55.381179699999995, 10.42454),
+							icon: "http://localhost/eventfinder/img/privatepin.png",
+							map: map,
+							title: 'Event'
+							});
+							
+							var cat6 = new google.maps.Marker({
+							position: new google.maps.LatLng(55.376979699999995, 10.43454),
+							icon: "http://localhost/eventfinder/img/privatepin.png",
+							map: map,
+							title: 'Event'
+							});
+							
+							var cat6 = new google.maps.Marker({
+							position: new google.maps.LatLng(55.375179699999995, 10.39454),
+							icon: "http://localhost/eventfinder/img/privatepin.png",
+							map: map,
+							title: 'Event'
+							});
+						<?php
+					}
+			?>
+
         }
 		
 		
@@ -296,6 +346,10 @@
 			$( "#forgottenpswd" ).hide();
 			$( "#register" ).hide();
 			$( "#login" ).show();			
+		})
+		
+		$(document).on('click','#my-location', function(e) {
+			location.reload(); 
 		})
 		
 		
