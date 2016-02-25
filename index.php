@@ -149,16 +149,10 @@
             };
 
             
-			var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+			var iconBase = 'https://localhost/eventfinder/';
 			var icons = {
 			  parking: {
-				icon: iconBase + 'parking_lot_maps.png'
-			  },
-			  library: {
-				icon: iconBase + 'library_maps.png'
-			  },
-			  info: {
-				icon: iconBase + 'info-i_maps.png'
+				icon: iconBase + 'pin.png'
 			  }
 			};
 
