@@ -369,7 +369,7 @@
 			$( "#login" ).show();			
 		})
 		
-		$(document).on('click','#my-location', function(e) {
+		$(document).on('click','#my-location, #logo-img', function(e) {
 			location.reload(); 
 		})
 		
