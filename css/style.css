@@ -314,3 +314,20 @@ a {
 		background:#323232;
 		color:#f15e22;
 		}
+		
+		#event-description {
+		display:nonoe;
+		text-align:center;
+		padding:20px;
+		display:none;
+		z-index: 99; 		
+		width:60%;
+		height:60%;
+		top:20%;
+		bottom:20%;
+		left:20%;
+		right:20%;
+		position: absolute; 
+		background:#323232;
+		color:#f15e22;
+		}

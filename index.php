@@ -24,22 +24,22 @@
 						<img class="header-menu-items" id="my-location" src="img/pin.png" alt="pin"></img>
 					</a>
 					<?php 
-					if (!isset($_SESSION["user"]))
-					{
+					//if (!isset($_SESSION["user"]))
+					//{
 					?>
 					<a href="#">
 						<img class="header-menu-items" id="menulogin" src="img/lock.png" alt="login"></img>
 					</a>
 					<?php 
-					}
-					else 
-					{	
+					//}
+					//else 
+					//{	
 					?>
 					<a href="#">
 						<img class="header-menu-items" id="profile" src="img/login.png" alt="login"></img>
 					</a>
 					<?php 
-					}
+					//}
 					?>
 					<a href="#">
 						<img class="header-menu-items" id="menu-item-1" src="img/eicon.png" alt="profile"></img>
@@ -166,6 +166,10 @@
 			Vel dolore labitur ut, eos minim oportere disputationi eu, delenit tibique accusam vix an. Meis mucius in vim. Ea prompta tractatos nam, imperdiet appellantur pri ex. Nam atqui honestatis ei, vix in natum harum eirmod. Ad eos atomorum gubergren reprehendunt, pro in sale atqui altera, mea ut eleifend delicatissimi.
 			</p>
 		</div>
+		<div id="event-description">
+		it will come
+		 <img src="/img/party.png" alt="party" height="42" width="42"> 
+		</div>
 		<div id="map">
 		</div>
 	</div>
@@ -206,24 +210,29 @@
             position: new google.maps.LatLng(cor1, cor2),
 			icon: icona,
             map: map,
-            title: 'Event Finder'
+            title: 'You'
             });
+			
+			marker.addListener('click', function() {
+				$( "#edit-profile" ).show();
+				$( ".magic-action" ).show();
+			});
+			  
 			<?php 
 					if (isset($_SESSION["user"]))
 					{
-						?>
-							var cat1 = new google.maps.Marker({
-							position: new google.maps.LatLng(55.386179699999995, 10.41124),
-							icon: "http://localhost/eventfinder/img/coorporatepin.png",
-							map: map,
-							title: 'Event'
-							});
+						?>		
 							
 							var cat2 = new google.maps.Marker({
 							position: new google.maps.LatLng(55.376111699999995, 10.41324),
 							icon: "http://localhost/eventfinder/img/coorporatepin.png",
 							map: map,
 							title: 'Event'
+							});
+							
+							cat2.addListener('click', function() {
+								$( "#event-description" ).show();
+								$( ".magic-action" ).show();
 							});
 							
 							var cat3 = new google.maps.Marker({
@@ -233,11 +242,21 @@
 							title: 'Event'
 							});
 							
+							cat3.addListener('click', function() {
+								$( "#event-description" ).show();
+								$( ".magic-action" ).show();
+							});
+							
 							var cat4 = new google.maps.Marker({
 							position: new google.maps.LatLng(55.383179699999995, 10.42124),
 							icon: "http://localhost/eventfinder/img/officialpin.png",
 							map: map,
 							title: 'Event'
+							});
+							
+							cat4.addListener('click', function() {
+								$( "#event-description" ).show();
+								$( ".magic-action" ).show();
 							});
 							
 							var cat5 = new google.maps.Marker({
@@ -247,6 +266,11 @@
 							title: 'Event'
 							});
 							
+							cat5.addListener('click', function() {
+								$( "#event-description" ).show();
+								$( ".magic-action" ).show();
+							});
+							
 							var cat6 = new google.maps.Marker({
 							position: new google.maps.LatLng(55.376979699999995, 10.43454),
 							icon: "http://localhost/eventfinder/img/privatepin.png",
@@ -254,11 +278,21 @@
 							title: 'Event'
 							});
 							
-							var cat6 = new google.maps.Marker({
+							cat6.addListener('click', function() {
+								$( "#event-description" ).show();
+								$( ".magic-action" ).show();
+							});
+							
+							var cat7 = new google.maps.Marker({
 							position: new google.maps.LatLng(55.375179699999995, 10.39454),
 							icon: "http://localhost/eventfinder/img/privatepin.png",
 							map: map,
 							title: 'Event'
+							});
+							
+							cat7.addListener('click', function() {
+								$( "#event-description" ).show();
+								$( ".magic-action" ).show(); 
 							});
 						<?php
 					}
@@ -289,6 +323,7 @@
 		$( "#forgottenpswd" ).hide();
 		$( ".magic-action" ).hide();
 		$( "#edit-profile" ).hide();
+		$( "#event-description" ).hide();
 		$( "#information-box" ).show();
 		$( "#about-us-div" ).hide();
 		$( "#about-eventfinder-div" ).hide();
@@ -405,6 +440,10 @@
 		})
 		
 		});
+		
+
+
+
     </script>
     
   </body>
