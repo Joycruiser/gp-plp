@@ -24,22 +24,22 @@
 						<img class="header-menu-items" id="my-location" src="img/pin.png" alt="pin"></img>
 					</a>
 					<?php 
-					//if (!isset($_SESSION["user"]))
-					//{
+					if (!isset($_SESSION["user"]))
+					{
 					?>
 					<a href="#">
 						<img class="header-menu-items" id="menulogin" src="img/lock.png" alt="login"></img>
 					</a>
 					<?php 
-					//}
-					//else 
-					//{	
+					}
+					else 
+					{	
 					?>
 					<a href="#">
 						<img class="header-menu-items" id="profile" src="img/login.png" alt="login"></img>
 					</a>
 					<?php 
-					//}
+					}
 					?>
 					<a href="#">
 						<img class="header-menu-items" id="menu-item-1" src="img/eicon.png" alt="profile"></img>
@@ -121,9 +121,9 @@
 			<div id="edit-profile-box">
 				<div id="edit-rofile-title"><h2>Edit Profile</h2></div>
 				<form action="" method="post">
-				 <img id="editpic" src="http://lorempixel.com/200/200/people/9/" class="avatar img-circle img-thumbnail" alt="avatar" width="100" height="100">
+				 <img id="editpic" src="http://lorempixel.com/200/200/people/9/" class="avatar img-circle img-thumbnail" alt="avatar" width="70" height="70">
 					<br>
-					
+					<br>
 					<input class="input-items" type="text" id="Fornavn" value="Name"/>
 					<br>
 					<br>
