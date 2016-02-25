@@ -74,10 +74,10 @@
 			<div id="footer-content">
 				<div id="footer-menu">
 					<a href="#">
-						<span class="footer-menu-items" id="footer-menu-item-2">About us</span>
+						<span class="footer-menu-items" id="about-us">About us</span>
 					</a>
 					<a href="#">
-						<span class="footer-menu-items">About EventFinder</span>
+						<span class="footer-menu-items" id="about-eventfinder">About EventFinder</span>
 					</a>
 				</div>
 			</div>
@@ -141,13 +141,22 @@
 			<div id="edit-profile-box">
 				<div id="edit-rofile-title"><h2>Edit Profile</h2></div>
 				<form action="" method="post">
-					<input class="input-items" type="text" id="username" placeholder="Username"/>
+				 <img id="editpic" src="http://lorempixel.com/200/200/people/9/" class="avatar img-circle img-thumbnail" alt="avatar" width="70" height="70">
 					<br>
 					<br>
-					<input class="input-items" type="password"  id="password" placeholder="Password"/>
+					<input class="input-items" type="text" id="Fornavn" value="Name"/>
 					<br>
 					<br>
-					<input type="submit" class="loginbtn" value="Log In" id="loginbtn" />
+					<input class="input-items" type="text" id="email" value="email"/>
+					<br>
+					<br>
+						<input class="input-items" type="text" placeholder="password" />
+					<br>
+					<br>
+					<input class="input-items" type="password"  placeholder="repeat password" />
+					<br>
+					<br>
+					<input type="submit" class="loginbtn" value="Update"/>
 				</form> 
 			</div>
 		</div>
@@ -166,6 +175,32 @@
 		<?php 
 		}
 		?>
+		<div id ="about-us-div">
+			<p>
+				Web development 2016 Hackathon
+			</p>
+			<p>
+				Project name: #EventFinder
+			</p>
+			<p>
+				Group 1
+			</p>
+			<p>
+				members: Georgi Morten Thor Kaspars Cecilie Ranuka
+			</p>
+			</p>
+		</div>
+		<div id ="about-eventfinder-div">
+			<p>
+			Vel dolore labitur ut, eos minim oportere disputationi eu, delenit tibique accusam vix an. Meis mucius in vim. Ea prompta tractatos nam, imperdiet appellantur pri ex. Nam atqui honestatis ei, vix in natum harum eirmod. Ad eos atomorum gubergren reprehendunt, pro in sale atqui altera, mea ut eleifend delicatissimi.
+			</p>
+		</div>
+		<div id="event-description">
+			<p>
+			it will come
+			</p>
+		 <img src="img/party.jpg" alt="party" height="250" width="450"></img>
+		</div>
 		<div id="map">
 		</div>
 	</div>
@@ -206,24 +241,29 @@
             position: new google.maps.LatLng(cor1, cor2),
 			icon: icona,
             map: map,
-            title: 'Event Finder'
+            title: 'You'
             });
+			
+			marker.addListener('click', function() {
+				$( "#edit-profile" ).show();
+				$( ".magic-action" ).show();
+			});
+			  
 			<?php 
 					if (isset($_SESSION["user"]))
 					{
-						?>
-							var cat1 = new google.maps.Marker({
-							position: new google.maps.LatLng(55.386179699999995, 10.41124),
-							icon: "http://localhost/eventfinder/img/coorporatepin.png",
-							map: map,
-							title: 'Event'
-							});
+						?>		
 							
 							var cat2 = new google.maps.Marker({
 							position: new google.maps.LatLng(55.376111699999995, 10.41324),
 							icon: "http://localhost/eventfinder/img/coorporatepin.png",
 							map: map,
 							title: 'Event'
+							});
+							
+							cat2.addListener('click', function() {
+								$( "#event-description" ).show();
+								$( ".magic-action" ).show();
 							});
 							
 							var cat3 = new google.maps.Marker({
@@ -233,11 +273,21 @@
 							title: 'Event'
 							});
 							
+							cat3.addListener('click', function() {
+								$( "#event-description" ).show();
+								$( ".magic-action" ).show();
+							});
+							
 							var cat4 = new google.maps.Marker({
 							position: new google.maps.LatLng(55.383179699999995, 10.42124),
 							icon: "http://localhost/eventfinder/img/officialpin.png",
 							map: map,
 							title: 'Event'
+							});
+							
+							cat4.addListener('click', function() {
+								$( "#event-description" ).show();
+								$( ".magic-action" ).show();
 							});
 							
 							var cat5 = new google.maps.Marker({
@@ -247,6 +297,11 @@
 							title: 'Event'
 							});
 							
+							cat5.addListener('click', function() {
+								$( "#event-description" ).show();
+								$( ".magic-action" ).show();
+							});
+							
 							var cat6 = new google.maps.Marker({
 							position: new google.maps.LatLng(55.376979699999995, 10.43454),
 							icon: "http://localhost/eventfinder/img/privatepin.png",
@@ -254,11 +309,21 @@
 							title: 'Event'
 							});
 							
-							var cat6 = new google.maps.Marker({
+							cat6.addListener('click', function() {
+								$( "#event-description" ).show();
+								$( ".magic-action" ).show();
+							});
+							
+							var cat7 = new google.maps.Marker({
 							position: new google.maps.LatLng(55.375179699999995, 10.39454),
 							icon: "http://localhost/eventfinder/img/privatepin.png",
 							map: map,
 							title: 'Event'
+							});
+							
+							cat7.addListener('click', function() {
+								$( "#event-description" ).show();
+								$( ".magic-action" ).show(); 
 							});
 						<?php
 					}
@@ -289,8 +354,10 @@
 		$( "#forgottenpswd" ).hide();
 		$( ".magic-action" ).hide();
 		$( "#edit-profile" ).hide();
+		$( "#event-description" ).hide();
 		$( "#information-box" ).show();
-
+		$( "#about-us-div" ).hide();
+		$( "#about-eventfinder-div" ).hide();
 		})
 
 		$('a, form').click(function(e) {
@@ -389,12 +456,25 @@
 			$( "#login" ).show();			
 		})
 		
-		$(document).on('click','#my-location', function(e) {
+		$(document).on('click','#my-location, #logo-img', function(e) {
 			location.reload(); 
 		})
 		
+		$(document).on('click','#about-us', function(e) {
+			$( "#about-us-div" ).show();
+			$( ".magic-action" ).show();
+		})
+		
+		$(document).on('click','#about-eventfinder', function(e) {
+			$( "#about-eventfinder-div" ).show();
+			$( ".magic-action" ).show();
+		})
 		
 		});
+		
+
+
+
     </script>
     
   </body>
