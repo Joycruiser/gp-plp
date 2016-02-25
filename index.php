@@ -141,8 +141,25 @@
 	<script type="text/javascript">
         google.maps.event.addDomListener(window, 'load', init);
         
-
-			var	icona = 'http://localhost/eventfinder/img/nonprofilepin.png';
+							<?php 
+					if (isset($_SESSION["user"]))
+					{
+						?>
+						var	icona = 'http://localhost/eventfinder/img/nonprofilepin.png';
+						var cor1 = 55.4038;
+						var cor2 = 10.4024;
+						<?php
+					}
+					else 
+					{
+						?>
+						var	icona = 'http://localhost/eventfinder/img/nonprofilepin.png';
+						var cor1 = 55.4038;
+						var cor2 = 10.4024;
+						<?php
+					}
+					?>
+					
 
 		
 				function init() {
@@ -155,7 +172,7 @@
             var mapElement = document.getElementById('map');
             var map = new google.maps.Map(mapElement, mapOptions);
             var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(55.4038, 10.4024),
+            position: new google.maps.LatLng(cor1, cor2),
 			icon: icona,
             map: map,
             title: 'Event Finder'
