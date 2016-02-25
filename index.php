@@ -54,10 +54,10 @@
 			<div id="footer-content">
 				<div id="footer-menu">
 					<a href="#">
-						<span class="footer-menu-items" id="footer-menu-item-2">About us</span>
+						<span class="footer-menu-items" id="about-us">About us</span>
 					</a>
 					<a href="#">
-						<span class="footer-menu-items">About EventFinder</span>
+						<span class="footer-menu-items" id="about-eventfinder">About EventFinder</span>
 					</a>
 				</div>
 			</div>
@@ -146,6 +146,26 @@
 		<?php 
 		}
 		?>
+		<div id ="about-us-div">
+			<p>
+				Web development 2016 Hackathon
+			</p>
+			<p>
+				Project name: #EventFinder
+			</p>
+			<p>
+				Group 1
+			</p>
+			<p>
+				members: Georgi Morten Thor Kaspars Cecilie Ranuka
+			</p>
+			</p>
+		</div>
+		<div id ="about-eventfinder-div">
+			<p>
+			Vel dolore labitur ut, eos minim oportere disputationi eu, delenit tibique accusam vix an. Meis mucius in vim. Ea prompta tractatos nam, imperdiet appellantur pri ex. Nam atqui honestatis ei, vix in natum harum eirmod. Ad eos atomorum gubergren reprehendunt, pro in sale atqui altera, mea ut eleifend delicatissimi.
+			</p>
+		</div>
 		<div id="map">
 		</div>
 	</div>
@@ -270,7 +290,8 @@
 		$( ".magic-action" ).hide();
 		$( "#edit-profile" ).hide();
 		$( "#information-box" ).show();
-
+		$( "#about-us-div" ).hide();
+		$( "#about-eventfinder-div" ).hide();
 		})
 
 		$('a, form').click(function(e) {
@@ -373,6 +394,15 @@
 			location.reload(); 
 		})
 		
+		$(document).on('click','#about-us', function(e) {
+			$( "#about-us-div" ).show();
+			$( ".magic-action" ).show();
+		})
+		
+		$(document).on('click','#about-eventfinder', function(e) {
+			$( "#about-eventfinder-div" ).show();
+			$( ".magic-action" ).show();
+		})
 		
 		});
     </script>
