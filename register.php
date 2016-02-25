@@ -10,7 +10,6 @@ $pswd = $_POST['pswd'];
 $email = $_POST['email'];
 $date = date('Y-m-d H:i:s');
 
-
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection

@@ -279,3 +279,18 @@ a {
 			display: none;
 		}
 		div.gmnoprint { margin-top: -50px; }
+		
+		#information-box {
+		width:30%;
+		height:20%;
+		top:120px;
+		bottom:10%;
+		left:1%;
+		position: absolute;
+		z-index: 99; 		
+		background:rgba(0, 0, 0, 0.7);	
+		padding:20px;
+		border:2px solid #f15e22;
+		color:white;
+		border-radius:10px;
+		}
