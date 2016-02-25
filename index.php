@@ -176,8 +176,10 @@
 			</p>
 		</div>
 		<div id="event-description">
-		it will come
-		 <img src="/img/party.png" alt="party" height="42" width="42"> 
+			<p>
+			it will come
+			</p>
+		 <img src="img/party.jpg" alt="party" height="250" width="450"></img>
 		</div>
 		<div id="map">
 		</div>
