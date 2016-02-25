@@ -176,6 +176,12 @@
             map: map,
             title: 'Event Finder'
             });
+			var cat1 = new google.maps.Marker({
+			position: new google.maps.LatLng(55.386179699999995, 10.41124),
+			icon: "http://localhost/eventfinder/img/coorporatepin.png",
+            map: map,
+            title: 'Event'
+            });
         }
 		
 		
