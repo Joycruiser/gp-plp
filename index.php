@@ -144,7 +144,7 @@
 					if (isset($_SESSION["user"]))
 					{
 						?>
-						var	icona = 'http://localhost/eventfinder/img/nonprofilepin.png';
+						var	icona = 'http://localhost/eventfinder/img/profilepin.png';
 						var cor1 = 55.380679699999995;
 						var cor2 = 10.4118356;
 						<?php
