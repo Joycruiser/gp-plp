@@ -6,8 +6,9 @@
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
 
-      <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="scripts.js"></script>
   </head>
   <body>
 	<div id="header-section"></div>
@@ -41,9 +42,28 @@
 					<?php 
 					}
 					?>
-					<a href="#">
 						<img class="header-menu-items" id="menu-item-1" src="img/eicon.png" alt="profile"></img>
-					</a>
+                        <div class="categories-menu">
+                            <div class="header-categories-box">
+                            <ul class="categories-list">
+                                <li class="categories-checkbox"><input type="checkbox"/>Private</li>
+                                    <ul class="categories-list">
+                                        <li class="categories-checkbox"><input type="checkbox"/>Party</li>
+                                        <li class="categories-checkbox"><input type="checkbox"/>BBQ</li>
+                                    </ul>
+                                <li class="categories-checkbox"><input type="checkbox"/>Corporate</li>
+                                    <ul class="categories-list">
+                                        <li class="categories-checkbox"><input type="checkbox"/>Entertainment</li>
+                                        <li class="categories-checkbox"><input type="checkbox"/>Dining</li>
+                                    </ul>
+                                <li class="categories-checkbox"><input type="checkbox"/>Official</li>
+                                    <ul class="categories-list">
+                                        <li class="categories-checkbox"><input type="checkbox"/>Education</li>
+                                        <li class="categories-checkbox"><input type="checkbox"/>Lectures</li>
+                                    </ul>
+                            </ul>
+                            </div>
+                        </div>
 				</div>
 				<div id="mobile-menu">
 					<img id="mobile-menu-img" src="img/mobile.png" alt="logo"></img>
