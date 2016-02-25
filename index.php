@@ -21,16 +21,10 @@
 					</a>
 				</div>
 				<div id="header-menu">
-					<a href="#">
-						<img class="header-menu-items" id="my-location" src="img/pin.png" alt="pin"></img>
-					</a>
 					<?php 
 					if (!isset($_SESSION["user"]))
 					{
 					?>
-					<a href="#">
-						<img class="header-menu-items" id="menulogin" src="img/lock.png" alt="login"></img>
-					</a>
 					<?php 
 					}
 					else 
@@ -43,21 +37,27 @@
 					}
 					?>
 						<img class="header-menu-items" id="menu-item-1" src="img/eicon.png" alt="profile"></img>
+                        <a href="#">
+                            <img class="header-menu-items" id="menulogin" src="img/lock.png" alt="login"></img>
+                        </a>
+                        <a href="#">
+                            <img class="header-menu-items" id="my-location" src="img/pin.png" alt="pin"></img>
+                        </a>
                         <div class="categories-menu">
                             <div class="header-categories-box">
                             <ul class="categories-list">
-                                <li class="categories-checkbox"><input type="checkbox"/>Private</li>
-                                    <ul class="categories-list">
+                                <li><img class="categories-icon" src="img/private.png" alt="" />Private</li>
+                                    <ul class="sub-categories-list">
                                         <li class="categories-checkbox"><input type="checkbox"/>Party</li>
                                         <li class="categories-checkbox"><input type="checkbox"/>BBQ</li>
                                     </ul>
-                                <li class="categories-checkbox"><input type="checkbox"/>Corporate</li>
-                                    <ul class="categories-list">
+                                <li><img  class="categories-icon" src="img/coorporate.png" alt="" />Private</li>
+                                    <ul class="sub-categories-list">
                                         <li class="categories-checkbox"><input type="checkbox"/>Entertainment</li>
                                         <li class="categories-checkbox"><input type="checkbox"/>Dining</li>
                                     </ul>
-                                <li class="categories-checkbox"><input type="checkbox"/>Official</li>
-                                    <ul class="categories-list">
+                                <li><img  class="categories-icon" src="img/official.png" alt="" />Private</li>
+                                    <ul class="sub-categories-list">
                                         <li class="categories-checkbox"><input type="checkbox"/>Education</li>
                                         <li class="categories-checkbox"><input type="checkbox"/>Lectures</li>
                                     </ul>
