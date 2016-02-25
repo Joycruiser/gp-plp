@@ -121,13 +121,22 @@
 			<div id="edit-profile-box">
 				<div id="edit-rofile-title"><h2>Edit Profile</h2></div>
 				<form action="" method="post">
-					<input class="input-items" type="text" id="username" placeholder="Username"/>
+				 <img id="editpic" src="http://lorempixel.com/200/200/people/9/" class="avatar img-circle img-thumbnail" alt="avatar" width="100" height="100">
+					<br>
+					
+					<input class="input-items" type="text" id="Fornavn" value="Name"/>
 					<br>
 					<br>
-					<input class="input-items" type="password"  id="password" placeholder="Password"/>
+					<input class="input-items" type="text" id="email" value="email"/>
 					<br>
 					<br>
-					<input type="submit" class="loginbtn" value="Log In" id="loginbtn" />
+						<input class="input-items" type="text" placeholder="password" />
+					<br>
+					<br>
+					<input class="input-items" type="password"  placeholder="repeat password" />
+					<br>
+					<br>
+					<input type="submit" class="loginbtn" value="Update"/>
 				</form> 
 			</div>
 		</div>
@@ -167,10 +176,8 @@
 			</p>
 		</div>
 		<div id="event-description">
-		<p>
 		it will come
-		</p>
-		 <img src="img/party.jpg" alt="party" height="250" width="450"></img>
+		 <img src="/img/party.png" alt="party" height="42" width="42"> 
 		</div>
 		<div id="map">
 		</div>
