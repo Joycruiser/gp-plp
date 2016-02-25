@@ -51,7 +51,7 @@ a {
 		background:#323232;
 		}
 		
-		#login-box, #register-box, #lost-box  {
+		#login-box, #register-box, #lost-box, #edit-profile-box  {
 			text-align: center;
 			height: 100%;
 			width: 100%;
@@ -59,7 +59,7 @@ a {
 			}
 			
 			
-		#login-title, #register-title, #lost-box {
+		#login-title, #register-title, #lost-box, #edit-rofile-title {
 			color:#f15e22;
 		}
 		
@@ -293,4 +293,8 @@ a {
 		border:2px solid #f15e22;
 		color:white;
 		border-radius:10px;
+		}
+		
+		#edit-profile {
+			display:none;
 		}

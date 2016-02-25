@@ -117,9 +117,21 @@
 		<div id="magic-top" class="magic-action"></div>
 		<div id="magic-right" class="magic-action"></div>
 		<div id="magic-bottom" class="magic-action"></div>
-		<div id="event-managing-center" class="event-tab">
-			<div class="event-tab-container">Search+categories filter+profile edit+ create event</div>
+		<div id="edit-profile" class="login-register-forgotten">
+			<div id="edit-profile-box">
+				<div id="edit-rofile-title"><h2>Edit Profile</h2></div>
+				<form action="" method="post">
+					<input class="input-items" type="text" id="username" placeholder="Username"/>
+					<br>
+					<br>
+					<input class="input-items" type="password"  id="password" placeholder="Password"/>
+					<br>
+					<br>
+					<input type="submit" class="loginbtn" value="Log In" id="loginbtn" />
+				</form> 
+			</div>
 		</div>
+		
 		<div id="notification" ><div id="notification-content"></div></div>
 		
 		<?php 
@@ -244,11 +256,19 @@
 		$( ".magic-action" ).show();
 		}) 
 
+		$(document).on('click','#profile', function(e) {
+		$( "#information-box" ).hide();
+		$( "#edit-profile" ).show();
+		$( ".magic-action" ).show();
+		}) 
+
+		
 		$(document).on('click','.magic-action', function(e) {
 		$( "#login" ).hide();
 		$( "#register" ).hide();
 		$( "#forgottenpswd" ).hide();
 		$( ".magic-action" ).hide();
+		$( "#edit-profile" ).hide();
 		$( "#information-box" ).show();
 
 		})
@@ -312,6 +332,7 @@
 
 		})
 		
+
 		
 		$(document).on('click','#lostbtn', function(e) {
 		var email = $('#lostemail').val();
