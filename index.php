@@ -25,6 +25,9 @@
 					if (!isset($_SESSION["user"]))
 					{
 					?>
+					    <a href="#">
+                            <img class="header-menu-items" id="menulogin" src="img/lock.png" alt="login"></img>
+                        </a>
 					<?php 
 					}
 					else 
@@ -37,9 +40,7 @@
 					}
 					?>
 						<img class="header-menu-items" id="menu-item-1" src="img/eicon.png" alt="profile"></img>
-                        <a href="#">
-                            <img class="header-menu-items" id="menulogin" src="img/lock.png" alt="login"></img>
-                        </a>
+
                         <a href="#">
                             <img class="header-menu-items" id="my-location" src="img/pin.png" alt="pin"></img>
                         </a>
