@@ -1,8 +1,38 @@
 a { 
-		text-decoration: none;
-		outline: none;
-		}
+    text-decoration: none;
+    outline: none;
+}
+
+.header-categories-box {
+    width: 15vw;
+    height: 60vh;
+    background-color: #000000;
+    margin-top: 20px;
+    margin-right:30px;
+    float:right;
+    border-radius:20px;
+    border: #f06424 solid 2px;
+    opacity: 0.7;
+}
+
+.categories-list {
+    list-style-type: none;
+    color: #f06424;
+}
 		
+.sub-categories-list {
+    list-style-type: none;
+    color: #f06424;
+    margin:-15px;
+}
+.categories-checkbox {
+    margin:-15px;
+}
+.categories-icon {
+    margin-top: 15px;
+    opacity: 1;
+}
+
 		html, body {
         height: 100%;
         width: 100%;
@@ -51,7 +81,7 @@ a {
 		background:#323232;
 		}
 		
-		#login-box, #register-box, #lost-box  {
+		#login-box, #register-box, #lost-box, #edit-profile-box  {
 			text-align: center;
 			height: 100%;
 			width: 100%;
@@ -59,7 +89,7 @@ a {
 			}
 			
 			
-		#login-title, #register-title, #lost-box {
+		#login-title, #register-title, #lost-box, #edit-rofile-title {
 			color:#f15e22;
 		}
 		
@@ -204,7 +234,7 @@ a {
 		vertical-align: middle;
 		}
 		
-		#footer-menu-item-2 {
+		#about-us {
 		margin-right:30px;
 		}
 		
@@ -250,7 +280,7 @@ a {
 		#header-menu {
 		padding:10px;
 		line-height:50px;
-		max-width:70%;
+		width:25%;
 		height:100%;
 		float:right;
 		}
@@ -258,7 +288,7 @@ a {
 		.header-menu-items {
 		margin-right:30px;
 		max-height:50%;
-		vertical-align: middle;
+        float:right;
 		}
 		
 		@media screen and (max-width:980px)
@@ -293,4 +323,45 @@ a {
 		border:2px solid #f15e22;
 		color:white;
 		border-radius:10px;
+		}
+		
+		#edit-profile {
+			display:none;
+		}
+		
+		#about-us-div, #about-eventfinder-div {
+		text-align:center;
+		padding:20px;
+		display:none;
+		z-index: 99; 		
+		width:60%;
+		height:100%;
+		top:0%;
+		bottom:0%;
+		left:20%;
+		right:20%;
+		position: absolute; 
+		background:#323232;
+		color:#f15e22;
+		}
+		
+		#event-description {
+		display:nonoe;
+		text-align:center;
+		padding:20px;
+		display:none;
+		z-index: 99; 		
+		width:60%;
+		height:60%;
+		top:20%;
+		bottom:20%;
+		left:20%;
+		right:20%;
+		position: absolute; 
+		background:#323232;
+		color:#f15e22;
+		}
+		
+		#editpic {
+			border-radius:150px;
 		}
