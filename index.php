@@ -1,13 +1,14 @@
 <?php session_start();?>
 <html>
   <head>
-    <title>Event Finder</title>
+    <title>Event Findera</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
 
-      <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="scripts.js"></script>
   </head>
   <body>
 	<div id="header-section"></div>
@@ -20,16 +21,13 @@
 					</a>
 				</div>
 				<div id="header-menu">
-					<a href="#">
-						<img class="header-menu-items" id="my-location" src="img/pin.png" alt="pin"></img>
-					</a>
 					<?php 
 					if (!isset($_SESSION["user"]))
 					{
 					?>
-					<a href="#">
-						<img class="header-menu-items" id="menulogin" src="img/lock.png" alt="login"></img>
-					</a>
+					    <a href="#">
+                            <img class="header-menu-items" id="menulogin" src="img/lock.png" alt="login"></img>
+                        </a>
 					<?php 
 					}
 					else 
@@ -41,9 +39,33 @@
 					<?php 
 					}
 					?>
-					<a href="#">
-						<img class="header-menu-items" id="menu-item-1" src="img/eicon.png" alt="profile"></img>
-					</a>
+						<a href="#">
+							<img class="header-menu-items" id="menu-item-1" src="img/eicon.png" alt="profile"></img>
+						</a>
+                        <a href="#">
+                            <img class="header-menu-items" id="my-location" src="img/pin.png" alt="pin"></img>
+                        </a>
+                        <div class="categories-menu">
+                            <div class="header-categories-box">
+                            <ul class="categories-list">
+                                <li><img class="categories-icon" src="img/private.png" alt="" />Private</li>
+                                    <ul class="sub-categories-list">
+                                        <li class="categories-checkbox"><input type="checkbox"/>Party</li>
+                                        <li class="categories-checkbox"><input type="checkbox"/>BBQ</li>
+                                    </ul>
+                                <li><img  class="categories-icon" src="img/coorporate.png" alt="" />Private</li>
+                                    <ul class="sub-categories-list">
+                                        <li class="categories-checkbox"><input type="checkbox"/>Entertainment</li>
+                                        <li class="categories-checkbox"><input type="checkbox"/>Dining</li>
+                                    </ul>
+                                <li><img  class="categories-icon" src="img/official.png" alt="" />Private</li>
+                                    <ul class="sub-categories-list">
+                                        <li class="categories-checkbox"><input type="checkbox"/>Education</li>
+                                        <li class="categories-checkbox"><input type="checkbox"/>Lectures</li>
+                                    </ul>
+                            </ul>
+                            </div>
+                        </div>
 				</div>
 				<div id="mobile-menu">
 					<img id="mobile-menu-img" src="img/mobile.png" alt="logo"></img>
