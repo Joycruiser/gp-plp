@@ -1,7 +1,7 @@
 <?php session_start();?>
 <html>
   <head>
-    <title>Event Finder</title>
+    <title>Event Finders</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
